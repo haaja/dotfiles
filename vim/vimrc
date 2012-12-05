@@ -1,0 +1,123 @@
+" Pathogen
+"runtime bundle/vim-pathogen/autoload/pathogen.vim
+" We are using vim, not vi
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+" My Bundles here:
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-markdown'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'tpope/vim-rails.git'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'klen/python-mode'
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+" non github repos
+Bundle 'git://git.wincent.com/command-t.git'
+
+
+syntax on
+filetype plugin indent on
+
+" Backup 
+set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
+
+set backspace=indent,eol,start
+set mouse=a
+set noerrorbells
+set wildmenu
+
+" UI
+set cursorline
+set linespace=0
+" hilight matching braces
+set showmatch
+set matchtime=5
+set nostartofline
+set ruler
+set scrolloff=10
+" how many commands are kept in history
+set history=100
+" Line numbers
+set number
+
+" Search
+set hlsearch    " hilight search
+set incsearch   " incremental search
+set ignorecase  " case insensitive
+set smartcase   " unless search term has capital letters
+
+" Indentation
+set cindent
+set smartindent
+set autoindent
+set shiftwidth=4    " how many columns text is indented with reindent operators
+set softtabstop=8   " how many columns is used when tab is hit in insert mode 
+set tabstop=8       " how many columns one tab is
+set noexpandtab     " let's use real tabs (set expandtab to add spaces)
+set smarttab
+
+" Text formatting
+set expandtab
+set ignorecase
+set smartcase
+set gdefault
+set wrap
+set textwidth=78
+set formatoptions=qrn1
+set colorcolumn=80
+
+
+
+"theme
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+    let g:solarized_termcolors=256
+endif
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
+colorscheme solarized
+
+" Rebind <leader> key
+let mapleader = ","
+
+" Unbind arrow keys
+noremap  <Up> ""
+noremap! <Up> <Esc>
+noremap  <Down> ""
+noremap! <Down> <Esc>
+noremap  <Left> ""
+noremap! <Left> <Esc>
+noremap  <Right> ""
+noremap! <Right> <Esc>
+
+" Move between windows
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" Move between tabs
+map <leader>n <esc>:tabprevious<CR>
+map <leader>m <esc>:tabnext<CR>
+
+" Better indentation
+vnoremap < <gv 
+vnoremap > >gv
+
+" Hidden chars
+set listchars=tab:▸\ ,eol:¬
