@@ -1,0 +1,7 @@
+[user]
+	name = Janne Haapsaari
+	email = haaja@iki.fi
+[core]
+	editor = vim
+[color]
+	ui = auto
