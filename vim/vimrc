@@ -28,6 +28,21 @@ Bundle 'git://git.wincent.com/command-t.git'
 syntax on
 filetype plugin indent on
 
+syntax enable
+"theme
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+    let g:solarized_termcolors=256
+endif
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
+colorscheme solarized
+
+set modeline
+
 " Backup 
 set backup
 set backupdir=~/.vim/backup
@@ -80,30 +95,19 @@ set colorcolumn=80
 
 
 
-"theme
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-    let g:solarized_termcolors=256
-endif
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
-colorscheme solarized
 
 " Rebind <leader> key
 let mapleader = ","
 
 " Unbind arrow keys
-noremap  <Up> ""
-noremap! <Up> <Esc>
-noremap  <Down> ""
-noremap! <Down> <Esc>
-noremap  <Left> ""
-noremap! <Left> <Esc>
-noremap  <Right> ""
-noremap! <Right> <Esc>
+"noremap  <Up> ""
+"noremap! <Up> <Esc>
+"noremap  <Down> ""
+"noremap! <Down> <Esc>
+"noremap  <Left> ""
+"noremap! <Left> <Esc>
+"noremap  <Right> ""
+"noremap! <Right> <Esc>
 
 " Move between windows
 map <c-j> <c-w>j
