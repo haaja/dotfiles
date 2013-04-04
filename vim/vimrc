@@ -18,6 +18,7 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'klen/python-mode'
+Bundle 'scrooloose/nerdtree'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -99,16 +100,6 @@ set colorcolumn=80
 " Rebind <leader> key
 let mapleader = ","
 
-" Unbind arrow keys
-"noremap  <Up> ""
-"noremap! <Up> <Esc>
-"noremap  <Down> ""
-"noremap! <Down> <Esc>
-"noremap  <Left> ""
-"noremap! <Left> <Esc>
-"noremap  <Right> ""
-"noremap! <Right> <Esc>
-
 " Move between windows
 map <c-j> <c-w>j
 map <c-k> <c-w>k
@@ -125,3 +116,6 @@ vnoremap > >gv
 
 " Hidden chars
 set listchars=tab:▸\ ,eol:¬
+
+" NERD tree
+"autocmd vimenter * NERDTree
