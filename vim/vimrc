@@ -19,6 +19,7 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'klen/python-mode'
 Bundle 'scrooloose/nerdtree'
+Bundle 'git://github.com/shawncplus/skittles_berry.git'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -32,15 +33,17 @@ filetype plugin indent on
 syntax enable
 "theme
 if has('gui_running')
-    set background=light
+    set background=dark
+    colorscheme solarized
 else
     set background=dark
-    let g:solarized_termcolors=256
+    "let g:solarized_termcolors=256
+    colorscheme skittles_berry
 endif
+
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
-colorscheme solarized
 
 set modeline
 
