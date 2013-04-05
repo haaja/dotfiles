@@ -29,8 +29,8 @@ Bundle 'git://git.wincent.com/command-t.git'
 
 syntax on
 filetype plugin indent on
-
 syntax enable
+
 "theme
 if has('gui_running')
     set background=dark
@@ -97,8 +97,8 @@ set textwidth=78
 set formatoptions=qrn1
 set colorcolumn=80
 
-
-
+set encoding=utf-8
+"set list listchars=tab:»»,trail:-,extends:>,precedes:<,eol:¬
 
 " Rebind <leader> key
 let mapleader = ","
