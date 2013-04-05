@@ -20,3 +20,6 @@ xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
 # Autocomplete
 complete -cf sudo
 complete -cf man
+
+# tmux 256 colors
+alias tmux='tmux -2'
