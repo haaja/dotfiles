@@ -18,7 +18,6 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'klen/python-mode'
-Bundle 'scrooloose/nerdtree'
 Bundle 'git://github.com/shawncplus/skittles_berry.git'
 " vim-scripts repos
 Bundle 'L9'
@@ -119,6 +118,3 @@ vnoremap > >gv
 
 " Hidden chars
 set listchars=tab:▸\ ,eol:¬
-
-" NERD tree
-"autocmd vimenter * NERDTree
