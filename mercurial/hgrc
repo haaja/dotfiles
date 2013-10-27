@@ -1,0 +1,11 @@
+[ui]
+username = Janne Haapsaari <haaja@iki.fi>
+merge = internal:merge
+
+[defaults]
+commit = -v
+
+[diff]
+git = 1
+showfunc = 1
+unified = 8
