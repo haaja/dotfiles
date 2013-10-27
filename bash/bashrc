@@ -25,3 +25,6 @@ complete -cf man
 
 # tmux 256 colors
 alias tmux='tmux -2'
+
+# ccache dir
+export CCACHE_DIR=/var/cache/ccache
