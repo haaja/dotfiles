@@ -28,3 +28,6 @@ alias tmux='tmux -2'
 
 # ccache dir
 export CCACHE_DIR=/var/cache/ccache
+
+# sshfs mounts
+sshfs -o idmap=user,allow_other haaja@lakka.kapsi.fi:/siilo/users/seppolokki/ /mnt/siilo
