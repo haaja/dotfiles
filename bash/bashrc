@@ -28,9 +28,3 @@ alias tmux='tmux -2'
 
 # ccache dir
 export CCACHE_DIR=/var/cache/ccache
-
-# sshfs mounts
-MOUNTED=$(mount -l |grep siilo | wc -l)
-if [ $MOUNTED != 1 ]; then
-    sshfs -o idmap=user,allow_other haaja@lakka.kapsi.fi:/siilo/users/seppolokki/ /mnt/siilo
-fi
