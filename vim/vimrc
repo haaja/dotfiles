@@ -36,8 +36,9 @@ if has('gui_running')
     colorscheme solarized
 else
     set background=dark
-    "let g:solarized_termcolors=256
-    colorscheme skittles_berry
+    let g:solarized_termcolors=256
+    "colorscheme skittles_berry
+    colorscheme solarized
 endif
 
 if $COLORTERM == 'gnome-terminal'
