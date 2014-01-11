@@ -94,3 +94,6 @@ export TERM=xterm-256color
 
 # init rbenv
 eval "$(rbenv init -)"
+
+# Make rake work with parameters
+alias rake='noglob rake'
