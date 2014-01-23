@@ -7,7 +7,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 " My Bundles here:
 " original repos on github
@@ -54,7 +54,7 @@ endif
 
 set modeline
 
-" Backup 
+" Backup
 set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
@@ -89,7 +89,7 @@ set cindent
 set smartindent
 set autoindent
 set shiftwidth=4    " how many columns text is indented with reindent operators
-set softtabstop=8   " how many columns is used when tab is hit in insert mode 
+set softtabstop=8   " how many columns is used when tab is hit in insert mode
 set tabstop=8       " how many columns one tab is
 set noexpandtab     " let's use real tabs (set expandtab to add spaces)
 set smarttab
@@ -121,8 +121,12 @@ map <leader>n <esc>:tabprevious<CR>
 map <leader>m <esc>:tabnext<CR>
 
 " Better indentation
-vnoremap < <gv 
+vnoremap < <gv
 vnoremap > >gv
 
 " Hidden chars
 set listchars=tab:▸\ ,eol:¬
+
+" hilight trailing spaces
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+$/
