@@ -63,6 +63,7 @@ eval `dircolors /etc/dir_colors`
 
 PATH=$PATH:/opt/android-sdk/tools
 PATH=$PATH:$HOME/.gem/ruby/2.1.0/bin
+PATH=$PATH:/opt/android-sdk/tools
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
