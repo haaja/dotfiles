@@ -98,3 +98,6 @@ eval "$(rbenv init -)"
 
 # Make rake work with parameters
 alias rake='noglob rake'
+
+# added by travis gem
+[ -f /home/haaja/.travis/travis.sh ] && source /home/haaja/.travis/travis.sh
