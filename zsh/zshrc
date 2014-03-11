@@ -37,7 +37,7 @@ ZSH_THEME="robbyrussell"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment following line if you want to  shown in the command execution time stamp 
+# Uncomment following line if you want to  shown in the command execution time stamp
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
 # HIST_STAMPS="dd.mm.yyyy"
@@ -56,14 +56,8 @@ source $ZSH/oh-my-zsh.sh
 # This will set the default prompt to the walters theme
 #prompt walters
 
-# Enable dircolors on solarized
-eval `dircolors /etc/dir_colors`
-
 # User configuration
 
-PATH=$PATH:/opt/android-sdk/tools
-PATH=$PATH:$HOME/.gem/ruby/2.1.0/bin
-PATH=$PATH:/opt/android-sdk/tools
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -84,9 +78,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 setopt HIST_IGNORE_DUPS
 
 # Trackpoint scrolling
-xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
-xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
-xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
+#xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
+#xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
+#xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
 
 # ccache dir
 export CCACHE_DIR=/var/cache/ccache
