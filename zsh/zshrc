@@ -95,3 +95,7 @@ alias rake='noglob rake'
 
 # added by travis gem
 [ -f /home/haaja/.travis/travis.sh ] && source /home/haaja/.travis/travis.sh
+
+if which ruby >/dev/null && which gem >/dev/null; then
+    PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+fi
