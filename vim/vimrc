@@ -35,8 +35,7 @@ if has('gui_running')
     endif
 else
     set background=dark
-    let g:solarized_termcolors=256
-    "colorscheme skittles_berry
+"    let g:solarized_termcolors=256
     colorscheme solarized
 endif
 
