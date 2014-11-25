@@ -72,6 +72,7 @@ set hlsearch    " hilight search
 set incsearch   " incremental search
 set ignorecase  " case insensitive
 set smartcase   " unless search term has capital letters
+nnoremap n nzz
 
 " Indentation
 set cindent
