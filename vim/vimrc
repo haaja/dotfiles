@@ -67,8 +67,6 @@ set ruler
 set scrolloff=10
 " how many commands are kept in history
 set history=100
-" Line numbers
-set number
 
 " Search
 set hlsearch    " hilight search
