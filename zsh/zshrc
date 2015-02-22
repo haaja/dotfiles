@@ -87,6 +87,9 @@ export CCACHE_DIR=/var/cache/ccache
 
 export TERM=xterm-256color
 
+# Export GOROOT
+export GOROOT=/usr/lib/go
+
 # init rbenv
 eval "$(rbenv init -)"
 
