@@ -90,8 +90,10 @@ export TERM=xterm-256color
 # Export GOROOT
 export GOROOT=/usr/lib/go
 
-# init rbenv
-eval "$(rbenv init -)"
+if which ruby >/dev/null && which gem >/dev/null; then
+    export PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+    export GEM_HOME=$(ruby -e 'print Gem.user_dir')
+fi
 
 # Make rake work with parameters
 alias rake='noglob rake'
@@ -99,10 +101,12 @@ alias rake='noglob rake'
 # added by travis gem
 [ -f /home/haaja/.travis/travis.sh ] && source /home/haaja/.travis/travis.sh
 
-if which ruby >/dev/null && which gem >/dev/null; then
-    export PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
-    export GEM_HOME=$(ruby -e 'print Gem.user_dir')
-fi
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+# init rbenv
+eval "$(rbenv init -)"
+
 
 # Launch tmux automatically
 # If not running interactively, do not do anything
