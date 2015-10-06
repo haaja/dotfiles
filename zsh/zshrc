@@ -107,6 +107,10 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 # init rbenv
 eval "$(rbenv init -)"
 
+# envoy
+envoy -t ssh-agent
+source <(envoy -p)
+
 
 # Launch tmux automatically
 # If not running interactively, do not do anything
