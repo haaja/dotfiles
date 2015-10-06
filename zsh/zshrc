@@ -111,6 +111,10 @@ eval "$(rbenv init -)"
 envoy -t ssh-agent
 source <(envoy -p)
 
+# android-sdk
+export ANDROID_HOME=/opt/android-sdk
+export PATH="/opt/android-sdk/tools:/opt/android-sdk/platform-tools:$PATH"
+
 
 # Launch tmux automatically
 # If not running interactively, do not do anything
