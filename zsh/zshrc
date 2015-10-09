@@ -115,6 +115,9 @@ source <(envoy -p)
 export ANDROID_HOME=/opt/android-sdk
 export PATH="/opt/android-sdk/tools:/opt/android-sdk/platform-tools:$PATH"
 
+# npm
+PATH="$HOME/.node_modules/bin:$PATH"
+export npm_config_prefix=~/.node_modules
 
 # Launch tmux automatically
 # If not running interactively, do not do anything
