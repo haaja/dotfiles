@@ -17,6 +17,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'klen/python-mode'
 Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
 
 syntax on
 filetype plugin indent on
@@ -119,3 +120,9 @@ set listchars=tab:▸\ ,eol:¬
 " hilight trailing spaces
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
+
+
+"""""""""""
+" Plugins "
+"""""""""""
+autocmd vimenter * NERDTree
