@@ -124,4 +124,4 @@ set listchars=tab:▸\ ,eol:¬
 """""""""""
 " Plugins "
 """""""""""
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
