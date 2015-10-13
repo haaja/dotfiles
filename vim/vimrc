@@ -25,6 +25,9 @@ syntax on
 filetype plugin indent on
 syntax enable
 
+" Automatic reloading of .vimrc
+autocmd! bufwritepost .vimrc %
+
 "theme
 if has('gui_running')
     set background=dark
