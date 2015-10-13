@@ -7,8 +7,8 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required!
 Bundle 'gmarik/vundle'
+
 " My Bundles here:
 " original repos on github
 Bundle 'tpope/vim-fugitive'
@@ -36,6 +36,11 @@ endif
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
+
+set laststatus=2
+
+" Rebind <leader> key
+let mapleader = ","
 
 set modeline
 
@@ -89,8 +94,6 @@ set formatoptions=qrn1
 set encoding=utf-8
 "set list listchars=tab:»»,trail:-,extends:>,precedes:<,eol:¬
 
-" Rebind <leader> key
-let mapleader = ","
 
 " Move between windows
 map <c-j> <c-w>j
