@@ -92,7 +92,6 @@ set gdefault
 set wrap
 set textwidth=78
 set formatoptions=qrn1
-set colorcolumn=80
 
 set encoding=utf-8
 "set list listchars=tab:»»,trail:-,extends:>,precedes:<,eol:¬
