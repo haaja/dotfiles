@@ -21,6 +21,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'mileszs/ack.vim'
+Plugin 'derekwyatt/vim-scala'
 
 syntax on
 filetype plugin indent on
