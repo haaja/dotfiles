@@ -118,9 +118,9 @@ export PATH="/opt/android-sdk/tools:/opt/android-sdk/platform-tools:$PATH"
 
 # nodejs and npm stuff
 # ====================
-export PATH="$HOME/.node_modules/bin:$PATH"
-export NPM_PACKAGES="${HOME}/.node_modules"
-export npm_config_prefix=${HOME}/.npm-modules
+export PATH="$HOME/.npm-packages/bin:$PATH"
+export NPM_PACKAGES="${HOME}/.npm-packages"
+export npm_config_prefix=${HOME}/.npm-packages
 export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
 # unset MANPATH # delete if you already modified MANPATH elsewhere in your
