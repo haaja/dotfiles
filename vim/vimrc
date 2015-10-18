@@ -84,9 +84,9 @@ nnoremap n nzz
 set cindent
 set smartindent
 set autoindent
+set tabstop=4       " how many columns one tab is
 set shiftwidth=4    " how many columns text is indented with reindent operators
 set softtabstop=8   " how many columns is used when tab is hit in insert mode
-set tabstop=8       " how many columns one tab is
 set noexpandtab     " let's use real tabs (set expandtab to add spaces)
 set smarttab
 
