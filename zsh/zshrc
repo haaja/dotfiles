@@ -108,11 +108,15 @@ alias rake='noglob rake'
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 # init rbenv
-eval "$(rbenv init -)"
+if which rbenv >/dev/null; then
+    eval "$(rbenv init -)"
+fi
 
 # envoy
-envoy -t ssh-agent
-source <(envoy -p)
+if which envoy >/dev/null; then
+    envoy -t ssh-agent
+    source <(envoy -p)
+fi
 
 # android-sdk
 export ANDROID_HOME=/opt/android-sdk
