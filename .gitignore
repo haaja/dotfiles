@@ -2,3 +2,4 @@ vim/backup
 vim/tmp
 *~
 *.elc
+emacs.d/elpa/
