@@ -90,6 +90,8 @@ export TERM=xterm-256color
 
 # Export GOROOT
 export GOROOT=/usr/lib/go
+export GOPATH=$HOME/.go
+export PATH="$PATH:$GOPATH/bin"
 
 if which ruby >/dev/null && which gem >/dev/null; then
     export PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
