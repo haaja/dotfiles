@@ -20,7 +20,6 @@ Bundle 'klen/python-mode'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'davidhalter/jedi-vim'
-Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'mileszs/ack.vim'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'kien/ctrlp.vim'
