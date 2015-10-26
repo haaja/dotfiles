@@ -3,3 +3,7 @@ vim/tmp
 *~
 *.elc
 emacs.d/elpa/
+emacs.d/.last-package-update-day
+emacs.d/eshell/
+emacs.d/games/
+
