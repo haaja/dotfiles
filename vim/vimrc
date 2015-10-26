@@ -25,7 +25,6 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'kien/ctrlp.vim'
 Bundle 'fatih/vim-go'
 Bundle 'majutsushi/tagbar'
-Bundle 'junegunn/fzf.vim'
 
 syntax on
 filetype plugin indent on
