@@ -59,6 +59,11 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Source fzf bindings
+if which fzf >/dev/null; then
+    . /etc/profile.d/fzf.zsh
+fi
+
 export PATH=/usr/lib/ccache/bin:$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
