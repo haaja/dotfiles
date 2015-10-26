@@ -49,6 +49,12 @@ Return a list of installed packages or nil for every skipped package."
 ; load solarized-dark theme
 (load-theme 'solarized-dark t)
 
+(eval-after-load 'shell
+  '(progn
+     (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
+     (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on t)
+     t))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
