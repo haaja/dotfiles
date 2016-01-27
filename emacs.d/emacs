@@ -42,7 +42,6 @@ Return a list of installed packages or nil for every skipped package."
 
 ; auctex
 (load "auctex.el" nil t t)
-(load "preview-latex.el" nil t t)
 
 ; load solarized-dark theme
 (load-theme 'solarized-dark t)
