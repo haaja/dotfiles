@@ -13,7 +13,7 @@ ZSH_THEME="robbyrussell"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment this to disable bi-weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
@@ -59,11 +59,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# Source fzf bindings
-if which fzf >/dev/null; then
-    . /etc/profile.d/fzf.zsh
-fi
-
 export PATH=/usr/lib/ccache/bin:$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -84,17 +79,18 @@ export PATH=/usr/lib/ccache/bin:$HOME/bin:/usr/local/bin:$PATH
 setopt HIST_IGNORE_DUPS
 
 # Trackpoint scrolling
-if which xinput >/dev/null; then
-   xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
-   xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
-   xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
-fi
+#if which xinput >/dev/null; then
+#   xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
+#   xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
+#   xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
+#fi
 
+
+
+export TERM=xterm-256color
 
 # ccache dir
 export CCACHE_DIR=/var/cache/ccache
-
-export TERM=xterm-256color
 
 # Export GOROOT
 export GOROOT=/usr/lib/go
@@ -118,12 +114,6 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 # init rbenv
 if which rbenv >/dev/null; then
     eval "$(rbenv init -)"
-fi
-
-# envoy
-if which envoy >/dev/null; then
-    envoy -t ssh-agent
-    source <(envoy -p)
 fi
 
 # android-sdk
