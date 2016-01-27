@@ -30,18 +30,13 @@ syntax on
 filetype plugin indent on
 syntax enable
 
-"theme
-if has('gui_running')
-    set background=dark
-    colorscheme solarized
-else
-    set background=dark
-    colorscheme solarized
-endif
-
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
+
+"theme
+colorscheme solarized
+set background=dark
 
 set laststatus=2
 
