@@ -85,8 +85,6 @@ setopt HIST_IGNORE_DUPS
 #   xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
 #fi
 
-
-
 export TERM=xterm-256color
 
 # ccache dir
@@ -122,14 +120,8 @@ export PATH="/opt/android-sdk/tools:/opt/android-sdk/platform-tools:$PATH"
 
 # nodejs and npm stuff
 # ====================
-export PATH="$HOME/.npm-packages/bin:$PATH"
-export NPM_PACKAGES="${HOME}/.npm-packages"
-export npm_config_prefix=${HOME}/.npm-packages
-export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
-# unset MANPATH # delete if you already modified MANPATH elsewhere in your
-# config
-MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+export PATH="$HOME/.node_modules/bin:$PATH"
+export NPM_CONFIG_PREFIX="$HOME/.node_modules"
 
 # Launch tmux automatically
 # If not running interactively, do not do anything
