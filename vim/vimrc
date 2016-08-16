@@ -2,6 +2,7 @@
 "runtime bundle/vim-pathogen/autoload/pathogen.vim
 " We are using vim, not vi
 set nocompatible
+
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -11,20 +12,21 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here:
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-markdown'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'sickill/vim-monokai'
-Bundle 'klen/python-mode'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'kien/ctrlp.vim'
-Bundle 'fatih/vim-go'
-Bundle 'majutsushi/tagbar'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-markdown'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'sickill/vim-monokai'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'kien/ctrlp.vim'
+Plugin 'fatih/vim-go'
+"Plugin 'klen/python-mode'
+"Plugin 'davidhalter/jedi-vim'
+"Plugin 'mileszs/ack.vim'
+"Plugin 'majutsushi/tagbar'
 
 syntax on
 filetype plugin indent on
