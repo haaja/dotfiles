@@ -36,6 +36,10 @@ Return a list of installed packages or nil for every skipped package."
 			  'helm
 			  'auctex)
 
+;disable toolbar
+(tool-bar-mode -1)
+
+
 ; python-mode
 (autoload 'python-mode "python-mode.el" "Python mode." t)
 (setq auto-mode-alist (append '(("/.*\.py\'" . python-mode)) auto-mode-alist))
