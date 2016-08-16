@@ -120,6 +120,9 @@ set listchars=tab:▸\ ,eol:¬
 :match ExtraWhitespace /\s\+$/
 
 
+" Markdown mode
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 """""""""""
 " Plugins "
 """""""""""
