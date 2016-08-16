@@ -32,13 +32,12 @@ syntax on
 filetype plugin indent on
 syntax enable
 
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
 
 "theme
-colorscheme solarized
+let g:solarized_termcolors = 256
+set t_Co=256
 set background=dark
+colorscheme solarized
 
 set laststatus=2
 
@@ -96,7 +95,6 @@ set formatoptions=qrn1
 
 set encoding=utf-8
 "set list listchars=tab:»»,trail:-,extends:>,precedes:<,eol:¬
-
 
 " Move between windows
 map <c-j> <c-w>j
