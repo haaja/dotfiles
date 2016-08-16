@@ -23,9 +23,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
+Plugin 'mileszs/ack.vim'
 "Plugin 'klen/python-mode'
 "Plugin 'davidhalter/jedi-vim'
-"Plugin 'mileszs/ack.vim'
 "Plugin 'majutsushi/tagbar'
 
 syntax on
