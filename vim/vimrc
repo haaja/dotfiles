@@ -16,6 +16,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'sickill/vim-monokai'
+Plugin 'dracula/vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'derekwyatt/vim-scala'
@@ -127,3 +128,5 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+"colorscheme dracula
