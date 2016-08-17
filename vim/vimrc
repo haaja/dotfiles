@@ -1,5 +1,3 @@
-" Pathogen
-"runtime bundle/vim-pathogen/autoload/pathogen.vim
 " We are using vim, not vi
 set nocompatible
 
