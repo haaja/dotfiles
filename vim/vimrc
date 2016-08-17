@@ -27,16 +27,7 @@ Plugin 'mileszs/ack.vim'
 "Plugin 'davidhalter/jedi-vim'
 "Plugin 'majutsushi/tagbar'
 
-syntax on
 filetype plugin indent on
-syntax enable
-
-
-"theme
-let g:solarized_termcolors = 256
-set t_Co=256
-set background=dark
-colorscheme solarized
 
 set laststatus=2
 
@@ -129,4 +120,12 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+
+"theme
+set t_Co=256
+syntax on
+
+"theme
+set background=dark
 "colorscheme dracula
+colorscheme solarized
