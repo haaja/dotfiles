@@ -56,6 +56,14 @@ Return a list of installed packages or nil for every skipped package."
      (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on t)
      t))
 
+
+; put backup files to a dedicated directory
+(setq backup-directory-alist `(("." . "~/.emacs.d/backup")))
+
+; create backup file by copying
+(setq backup-by-copying t)
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
