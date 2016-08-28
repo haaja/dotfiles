@@ -51,8 +51,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 #autoload -U compinit promptinit
-#compinit
-#promptinit
+#prompt pure
 
 # This will set the default prompt to the walters theme
 #prompt walters
@@ -130,3 +129,5 @@ export NPM_CONFIG_PREFIX="$HOME/.node_modules"
 
 # Aliases
 alias vim="nvim"
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
