@@ -126,5 +126,3 @@ export NPM_CONFIG_PREFIX="$HOME/.node_modules"
 # If not running interactively, do not do anything
 #[[ $- != *i* ]] && return
 #[[ -z "$TMUX" ]] && exec tmux
-
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
