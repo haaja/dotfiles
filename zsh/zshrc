@@ -127,7 +127,4 @@ export NPM_CONFIG_PREFIX="$HOME/.node_modules"
 #[[ $- != *i* ]] && return
 #[[ -z "$TMUX" ]] && exec tmux
 
-# Aliases
-alias vim="nvim"
-
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
