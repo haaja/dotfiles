@@ -50,12 +50,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-#autoload -U compinit promptinit
-#prompt pure
-
-# This will set the default prompt to the walters theme
-#prompt walters
-
 # User configuration
 
 export PATH=/usr/lib/ccache/bin:$HOME/bin:/usr/local/bin:$PATH
