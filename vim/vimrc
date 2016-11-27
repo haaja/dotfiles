@@ -127,5 +127,5 @@ syntax on
 
 "theme
 set background=dark
-"colorscheme dracula
-colorscheme solarized
+"colorscheme solarized
+colorscheme Tomorrow-Night
