@@ -58,7 +58,9 @@ Return a list of installed packages or nil for every skipped package."
 
 
 ; put backup files to a dedicated directory
-(setq backup-directory-alist `(("." . "~/.emacs.d/backup")))
+(setq backup-directory-alist
+      '(("." . "~/.emacs.d/backup"))
+      delete-old-versions t)
 
 ; create backup file by copying
 (setq backup-by-copying t)
