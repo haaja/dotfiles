@@ -88,3 +88,6 @@ source $ZSH/oh-my-zsh.sh
 # Enable ccache
 export PATH="/usr/lib/ccache/bin/:$PATH"
 export CCACHE_DIR=/tmp/ccache
+
+# Add ~/bin to PATH
+export PATH="$PATH:$HOME/bin"
