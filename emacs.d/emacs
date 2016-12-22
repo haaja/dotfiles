@@ -39,6 +39,9 @@ Return a list of installed packages or nil for every skipped package."
 ;disable toolbar
 (tool-bar-mode -1)
 
+; auto-complete-mode
+(require 'auto-complete)
+(global-auto-complete-mode t)
 
 ; python-mode
 (autoload 'python-mode "python-mode.el" "Python mode." t)
