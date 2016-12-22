@@ -43,9 +43,9 @@ Return a list of installed packages or nil for every skipped package."
 (require 'auto-complete)
 (global-auto-complete-mode t)
 
-; python-mode
-(autoload 'python-mode "python-mode.el" "Python mode." t)
-(setq auto-mode-alist (append '(("/.*\.py\'" . python-mode)) auto-mode-alist))
+; elpy
+(package-initialize)
+(elpy-enable)
 
 ; auctex
 (load "auctex.el" nil t t)
