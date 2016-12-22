@@ -22,11 +22,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
 Plugin 'mileszs/ack.vim'
 Plugin 'chriskempson/vim-tomorrow-theme'
-"Plugin 'derekwyatt/vim-scala'
-"Plugin 'Valloric/YouCompleteMe'
-"Plugin 'klen/python-mode'
-"Plugin 'davidhalter/jedi-vim'
-"Plugin 'majutsushi/tagbar'
 
 filetype plugin indent on
 
