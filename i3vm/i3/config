@@ -174,3 +174,5 @@ bindsym $mod+Shift+p mode "$mode_system"
 exec --no-startup-id dropbox start
 
 exec --no-startup-id nm-applet
+
+exec_always --no-startup-id feh --bg-scale ~/Dropbox/Wallpapers/imac-pro-wallpaper.jpg
