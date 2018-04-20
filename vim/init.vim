@@ -1,1 +1,1 @@
-/home/haaja/.vimrc
+vimrc
