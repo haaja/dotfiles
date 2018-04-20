@@ -9,9 +9,8 @@
 (setq package-enable-at-startup nil)
 (package-initialize)
 
-
 (defun ensure-package-installed (&rest packages)
-  "Assure every package is installed, ask for installation if it’s not.
+"Assure every package is installed, ask for installation if it’s not.
 
 Return a list of installed packages or nil for every skipped package."
   (mapcar
@@ -32,23 +31,18 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; Ensure that specific packages are installed
 (ensure-package-installed 'helm
-			  'auctex
-			  'color-theme-sanityinc-tomorrow
-			  'wcheck-mode)
+			  'color-theme-sanityinc-tomorrow)
 
 ;disable toolbar
 (tool-bar-mode -1)
 
 ; auto-complete-mode
-(require 'auto-complete)
-(global-auto-complete-mode t)
+;(require 'auto-complete)
+;(global-auto-complete-mode t)
 
 ; elpy
-(package-initialize)
-(elpy-enable)
-
-; auctex
-(load "auctex.el" nil t t)
+;(package-initialize)
+;(elpy-enable)
 
 ; load theme
 (load-theme 'sanityinc-tomorrow-night t)
@@ -68,55 +62,10 @@ Return a list of installed packages or nil for every skipped package."
 ; create backup file by copying
 (setq backup-by-copying t)
 
-(autoload 'wcheck-mode "wcheck-mode"
-  "Toggle wcheck-mode." t)
-(autoload 'wcheck-change-language "wcheck-mode"
-  "Switch wcheck-mode languages." t)
-(autoload 'wcheck-actions "wcheck-mode"
-  "Open actions menu." t)
-(autoload 'wcheck-jump-forward "wcheck-mode"
-  "Move point forward to next marked text area." t)
-(autoload 'wcheck-jump-backward "wcheck-mode"
-  "Move point backward to previous marked text area." t)
-
-(defvar my-finnish-syntax-table
-  (copy-syntax-table text-mode-syntax-table))
-
-(modify-syntax-entry ?- "w" my-finnish-syntax-table)
-
-(setq wcheck-language-data
-      '(("British English"
-	 (program . "/usr/bin/enchant")
-	 (args "-l" "-d" "en_GB")
-	 (action-program . "/usr/bin/enchant")
-	 (action-args "-a" "-d" "en_GB")
-	 (action-parser . wcheck-parser-ispell-suggestions))
-
-	("Finnish"
-	 (program . "/usr/bin/enchant")
-	 (args "-l" "-d" "fi")
-	 (syntax . my-finnish-syntax-table)
-	 (action-program . "/usr/bin/enchant")
-	 (action-args "-a" "-d" "fi")
-	 (action-parser . wcheck-parser-ispell-suggestions))
-
-	("English US"
-	 (program . "/usr/bin/enchant")
-	 (args "-l" "-d" "en_US")
-	 (syntax . my-finnish-syntax-table)
-	 (action-program . "/usr/bin/enchant")
-	 (action-args "-a" "-d" "en_US")
-	 (action-parser . wcheck-parser-ispell-suggestions))))
-
-(setq wcheck-language-data-defaults
-      '(("English US"
-	 (program . "/usr/bin/enchant")
-	 (args "-l" "-d" "en_US")
-	 (action-program . "/usr/bin/enchant")
-	 (action-args "-a" "-d" "en_US")
-	 (action-parser . wcheck-parser-ispell-suggestions))))
-
-
+; OSX specific settings
+(setq default-input-method "MacOSX")
+(setq mac-option-key-is-meta t)
+(setq mac-right-option-modifier nil)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -131,7 +80,7 @@ Return a list of installed packages or nil for every skipped package."
     ("1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "11636897679ca534f0dec6f5e3cb12f28bf217a527755f6b9e744bd240ed47e1" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(package-selected-packages
    (quote
-    (elpy tern-auto-complete tern jedi wcheck-mode web-mode helm-ag solarized-theme markdown-mode linum-relative color-theme-sanityinc-tomorrow color-theme auctex ag)))
+    (helm tern-auto-complete tern web-mode helm-ag markdown-mode linum-relative color-theme-sanityinc-tomorrow color-theme ag)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
