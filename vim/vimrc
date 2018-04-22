@@ -23,6 +23,7 @@ Plug 'fatih/vim-go'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'pangloss/vim-javascript'
 Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
