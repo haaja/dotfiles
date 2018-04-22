@@ -25,6 +25,12 @@ Plug 'pangloss/vim-javascript'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 
+
+" fzf is installed via homebrew
+if !empty(glob("/usr/local/opt/fzf"))
+    Plug '/usr/local/opt/fzf'
+endif
+
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
