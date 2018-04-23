@@ -135,6 +135,7 @@ set listchars=tab:▸\ ,eol:¬
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
 
+set lazyredraw
 
 " Markdown mode
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
