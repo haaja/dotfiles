@@ -1,6 +1,10 @@
 [user]
 	name = Janne Haapsaari
 	email = haaja@iki.fi
+[push]
+	default = simple
+[pull]
+	rebase = true
 [core]
 	editor = vim
 [color]
@@ -8,4 +12,5 @@
 [merge]
 	tool = vimdiff
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lol = log --pretty=format:'%Cred%h %Creset: %C(yellow) Authored: %Creset %aD %Cgreen Committed: %Creset %cD %an %cn %s' --abbrev-commit
