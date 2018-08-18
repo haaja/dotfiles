@@ -126,7 +126,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 "map esc to exit terminal-mode
-tnoremap <Esc> <C-\><C-n>
+"tnoremap <Esc> <C-\><C-n>
 
 " Hidden chars
 set listchars=tab:▸\ ,eol:¬
