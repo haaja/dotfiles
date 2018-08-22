@@ -6,11 +6,12 @@
 [pull]
 	rebase = true
 [core]
-	editor = vim
+	editor = nvim
+	excludesfile = /Users/haaja/.gitignore
 [color]
 	ui = auto
 [merge]
-	tool = vimdiff
+	tool = nvim -d
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     lol = log --pretty=format:'%Cred%h %Creset: %C(yellow) Authored: %Creset %aD %Cgreen Committed: %Creset %cD %an %cn %s' --abbrev-commit
