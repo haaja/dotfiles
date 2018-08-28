@@ -26,6 +26,13 @@ Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](node_modules|target|dist)|(\.(git|hg|svn))$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
+
 " fzf is installed via homebrew
 if !empty(glob("/usr/local/opt/fzf"))
     Plug '/usr/local/opt/fzf'
