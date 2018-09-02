@@ -128,3 +128,7 @@ if [ -f "$(which fzf)" ]; then
     alias preview="fzf --preview 'bat --color \"always\" {}'"
     export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 fi
+
+if [ -f "$(which ncdu)" ]; then
+    alias ncdu="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+fi
