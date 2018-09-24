@@ -1,4 +1,4 @@
-;; package repositories
+;; Package repositories
 (require 'package)
 
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
@@ -80,8 +80,8 @@ Return a list of installed packages or nil for every skipped package."
 (global-hl-line-mode +1)
 
 ; load theme
-;(load-theme 'sanityinc-tomorrow-night t)
-(load-theme 'solarized-dark t)
+(load-theme 'sanityinc-tomorrow-night t)
+;(load-theme 'solarized-dark t)
 
 (eval-after-load 'shell
   '(progn
