@@ -121,6 +121,9 @@ fi
 # Add ~/bin to PATH
 export PATH="${PATH}:${HOME}/bin"
 
+# rbenv
+eval "$(rbenv init -)"
+
 # Ruby gems
 PATH="$(ruby -e 'print Gem.user_dir')/bin:${PATH}"
 
