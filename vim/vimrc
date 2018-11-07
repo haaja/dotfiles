@@ -24,6 +24,7 @@ Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'pangloss/vim-javascript'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
