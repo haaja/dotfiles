@@ -43,23 +43,6 @@ call plug#end()
 
 let g:deoplete#enable_at_startup = 1
 
-"set rtp+=~/.vim/bundle/vundle/
-"call vundle#rc()
-
-" let Vundle manage Vundle
-"Bundle 'gmarik/vundle'
-
-" My Bundles here:
-" original repos on github
-"Plugin 'tpope/vim-fugitive'
-"Plugin 'tpope/vim-markdown'
-"Plugin 'Lokaltog/vim-easymotion'
-"Plugin 'altercation/vim-colors-solarized'
-"Plugin 'sickill/vim-monokai'
-"Plugin 'dracula/vim'
-"Plugin 'scrooloose/syntastic'
-"Plugin 'scrooloose/nerdtree'
-
 filetype plugin indent on
 
 set laststatus=2
@@ -162,8 +145,17 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 "       pip3 install neovim
 "       npm install -g neovim
 "       gem install neovim
-let g:python2_host_prog = '/usr/local/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
+if has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
+    " Do Mac stuff here
+	let g:python2_host_prog = '/usr/local/bin/python'
+	let g:python3_host_prog = '/usr/local/bin/python3'
+  else
+	let g:python2_host_prog = '/usr/bin/python2'
+	let g:python3_host_prog = '/usr/bin/python'
+  endif
+endif
 
 
 "theme
