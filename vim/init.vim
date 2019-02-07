@@ -116,7 +116,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 "map esc to exit terminal-mode
-"tnoremap <Esc> <C-\><C-n>
+tnoremap <Esc> <C-\><C-n>
 
 " Hidden chars
 set listchars=tab:▸\ ,eol:¬
@@ -133,8 +133,7 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 """""""""""
 " Plugins "
 """""""""""
-" autocmd vimenter * NERDTree
-"
+autocmd vimenter * NERDTree
 
 " Needed for deoplete
 " One should also do:
