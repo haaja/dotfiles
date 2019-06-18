@@ -64,6 +64,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
   git
   ssh-agent
+  aws
 )
 
 source $ZSH/oh-my-zsh.sh
