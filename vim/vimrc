@@ -136,8 +136,8 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 """""""""""
 " Plugins "
 """""""""""
-" autocmd vimenter * NERDTree
-"
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+map <Tab> :NERDTreeToggle<CR>
 
 " Needed for deoplete
 " One should also do:
