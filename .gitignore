@@ -1,6 +1,7 @@
 vim/backup
 vim/tmp
 vim/plugged
+vim/autoload/plug.vim.old
 *~
 *.elc
 emacs.d/elpa/
