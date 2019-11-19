@@ -129,10 +129,14 @@ fi
 export PATH="${PATH}:${HOME}/bin"
 
 # rbenv
-eval "$(rbenv init -)"
+if [ -f "$(which rbenv)" ]; then
+    eval "$(rbenv init -)"
+fi
 
 # Ruby gems
-PATH="$(ruby -e 'print Gem.user_dir')/bin:${PATH}"
+if [ -f "$(which ruby)" ]; then
+    PATH="$(ruby -e 'print Gem.user_dir')/bin:${PATH}"
+fi
 
 if [ -f "$(which fzf)" ]; then
     alias preview="fzf --preview 'bat --color \"always\" {}'"
@@ -144,7 +148,9 @@ if [ -f "$(which ncdu)" ]; then
 fi
 
 export PATH="${HOME}/.jenv/bin:${PATH}"
-eval "$(jenv init -)"
+if [ -f "$(which jenv)" ]; then
+    eval "$(jenv init -)"
+fi
 
 if [ -d "${HOME}/Library/Android/sdk/platform-tools" ]; then
     export PATH="${HOME}/Library/Android/sdk/platform-tools:${PATH}"
