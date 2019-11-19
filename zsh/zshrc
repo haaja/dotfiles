@@ -126,7 +126,9 @@ if [ -d "${HOME}/.nvm" ]; then
 fi
 
 # Add ~/bin to PATH
-export PATH="${PATH}:${HOME}/bin"
+if [ -d "${HOME}/bin" ]; then
+    export PATH="${PATH}:${HOME}/bin"
+fi
 
 # rbenv
 if [ -f "$(which rbenv)" ]; then
@@ -147,7 +149,9 @@ if [ -f "$(which ncdu)" ]; then
     alias ncdu="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 fi
 
-export PATH="${HOME}/.jenv/bin:${PATH}"
+if [ -d "${HOME}/.jenv" ]; then
+    export PATH="${HOME}/.jenv/bin:${PATH}"
+fi
 if [ -f "$(which jenv)" ]; then
     eval "$(jenv init -)"
 fi
