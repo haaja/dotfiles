@@ -160,7 +160,12 @@ if [ -d "${HOME}/Library/Android/sdk/platform-tools" ]; then
     export PATH="${HOME}/Library/Android/sdk/platform-tools:${PATH}"
     export ANDROID_HOME="${HOME}/Library/Android/sdk"
 fi
+
 if [ -d "${HOME}/Library/Android/sdk/emulator/" ]; then
     export PATH="${HOME}/Library/Android/sdk/emulator:${PATH}"
+fi
+
+if [ -d "${HOME}/go/bin/" ]; then
+    export PATH="${HOME}/go/bin:${PATH}"
 fi
 
