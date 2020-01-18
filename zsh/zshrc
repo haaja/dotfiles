@@ -169,3 +169,11 @@ if [ -d "${HOME}/go/bin/" ]; then
     export PATH="${HOME}/go/bin:${PATH}"
 fi
 
+if [ -f "$(which pyenv)" ]; then
+    eval "$(pyenv init -)"
+fi
+
+if [ -f "$(which pyenv-virtualenv)" ]; then
+    eval "$(pyenv virtualenv-init -)"
+fi
+
