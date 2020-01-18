@@ -177,3 +177,8 @@ if [ -f "$(which pyenv-virtualenv)" ]; then
     eval "$(pyenv virtualenv-init -)"
 fi
 
+if [ -d "/usr/local/opt/openssl@1.1" ]; then
+    export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+    export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+fi
+
