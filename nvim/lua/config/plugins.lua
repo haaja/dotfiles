@@ -38,8 +38,11 @@ return require('packer').startup(function(use)
 
   use {
       'nvim-tree/nvim-tree.lua',
-      after = 'nvim-web-devicons', -- optional, for file icons
-      requires = 'nvim-tree/nvim-web-devicons'
+      requires = {
+          'nvim-tree/nvim-web-devicons'
+      }
+      --after = 'nvim-web-devicons', -- optional, for file icons
+      --requires = 'nvim-tree/nvim-web-devicons'
       --tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
