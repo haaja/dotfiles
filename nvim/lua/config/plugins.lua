@@ -11,7 +11,6 @@ return require('packer').startup(function(use)
   }
 
   use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
-  use({ 'rose-pine/neovim', as = 'rose-pine' })
 
   use {
       'VonHeikemen/lsp-zero.nvim',
@@ -49,6 +48,10 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
 
   use('fatih/vim-go')
+
+
+  --use({ 'rose-pine/neovim', as = 'rose-pine' })
+  use('bluz71/vim-nightfly-colors')
 
 
   -- Automatically set up your configuration after cloning packer.nvim

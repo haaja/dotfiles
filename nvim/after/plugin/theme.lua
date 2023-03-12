@@ -1,5 +1,6 @@
-require('rose-pine').setup({
-    disable_background = true
-})
+local status, _ = pcall(vim.cmd, 'colorscheme nightfly')
+if not status then
+    print('nightlfy colorscheme not found')
+    return
+end
 
-vim.cmd('colorscheme rose-pine')
