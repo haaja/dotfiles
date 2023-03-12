@@ -22,5 +22,6 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 16
 
 vim.opt.cursorline = true
+vim.opt.backspace = "indent,eol,start"
 
 --vim.opt.colorcolumn = 80
