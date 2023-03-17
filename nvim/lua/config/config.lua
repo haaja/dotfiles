@@ -24,4 +24,5 @@ vim.opt.scrolloff = 16
 vim.opt.cursorline = true
 vim.opt.backspace = "indent,eol,start"
 
+vim.opt.clipboard = 'unnamedplus'
 --vim.opt.colorcolumn = 80
