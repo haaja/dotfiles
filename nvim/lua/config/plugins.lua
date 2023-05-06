@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
   }
 
   use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
+  use 'nvim-treesitter/nvim-treesitter-context'
 
   use {
       'VonHeikemen/lsp-zero.nvim',
@@ -52,12 +53,6 @@ return require('packer').startup(function(use)
 
   --use({ 'rose-pine/neovim', as = 'rose-pine' })
   use('bluz71/vim-nightfly-colors')
-
-  use {
-      'nvim-lualine/lualine.nvim',
-      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
-
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
