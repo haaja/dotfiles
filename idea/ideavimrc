@@ -1,7 +1,5 @@
 let mapleader=" "
 
-set relativenumber
-
 nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
 nnoremap <leader>=  :action ReformatCode<CR>
 nnoremap ge :action GotoNextError<CR>
