@@ -36,16 +36,6 @@ return require('packer').startup(function(use)
       }
   }
 
-  use {
-      'nvim-tree/nvim-tree.lua',
-      requires = {
-          'nvim-tree/nvim-web-devicons'
-      }
-      --after = 'nvim-web-devicons', -- optional, for file icons
-      --requires = 'nvim-tree/nvim-web-devicons'
-      --tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  }
-
   use('tpope/vim-fugitive')
 
   use('fatih/vim-go')
