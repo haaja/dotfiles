@@ -1,0 +1,25 @@
+# This is Git's per-user configuration file.
+[user]
+    name = Janne Haapsaari
+    email = janne@joh.fi
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILTYUtfpHLUmiYqRV37JNNmi36s6oS28Y3m9+FWgyLgF
+[push]
+    default = simple
+[pull]
+    rebase = true
+[core]
+    editor = nvim
+    pager = perl /opt/homebrew/opt/git/share/git-core/contrib/diff-highlight/diff-highlight | less
+[color]
+    ui = auto
+[merge]
+    tool = nvim -d
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lol = log --pretty=format:'%Cred%h %Creset: %C(yellow) Authored: %Creset %aD %Cgreen Committed: %Creset %cD %an %cn %s' --abbrev-commit
+[gpg]
+    format = ssh
+[gpg "ssh"]
+    program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+    gpgsign = true
