@@ -6,7 +6,10 @@ local lsp = require('lsp-zero').preset({
 })
 
 lsp.ensure_installed({
-    'tsserver'
+    'tsserver',
+    'eslint',
+    'lua_ls',
+    'gopls'
 })
 
 
