@@ -37,6 +37,7 @@ return require('packer').startup(function(use)
   }
 
   use('tpope/vim-fugitive')
+  use('tpope/vim-sleuth')
 
   use('fatih/vim-go')
 
