@@ -1,56 +1,59 @@
-vim.cmd [[packadd packer.nvim]]
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
-  -- My plugins here
-  --
-  use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.3',
-	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
-  }
+vim.g.mapleader = " "
 
-  use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
-  use 'nvim-treesitter/nvim-treesitter-context'
+require("lazy").setup({
+  {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.3',
+    dependencies = {
+      {'nvim-lua/plenary.nvim'},
+    },
+  },
+  {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
+  {'nvim-treesitter/nvim-treesitter-context' },
+  {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v1.x',
+    dependencies = {
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},
+      {'williamboman/mason.nvim'},
+      {'williamboman/mason-lspconfig.nvim'},
 
-  use {
-      'VonHeikemen/lsp-zero.nvim',
-      branch = 'v1.x',
-      requires = {
-          -- LSP Support
-          {'neovim/nvim-lspconfig'},
-          {'williamboman/mason.nvim'},
-          {'williamboman/mason-lspconfig.nvim'},
+      -- Autocomplet ion
+      {'hrsh7th/nvim-cmp'},
+      {'hrsh7th/cmp-buffer'},
+      {'hrsh7th/cmp-path'},
+      {'saadparwaiz1/cmp_luasnip'},
+      {'hrsh7th/cmp-nvim-lsp'},
+      {'hrsh7th/cmp-nvim-lua'},
 
-          -- Autocompletion
-          {'hrsh7th/nvim-cmp'},
-          {'hrsh7th/cmp-buffer'},
-          {'hrsh7th/cmp-path'},
-          {'saadparwaiz1/cmp_luasnip'},
-          {'hrsh7th/cmp-nvim-lsp'},
-          {'hrsh7th/cmp-nvim-lua'},
+      -- Snippets
+      {'L3MON4D3/LuaSnip'},
+      {'rafamadriz/friendly-snippets'},
+    }
+  },
 
-          -- Snippets
-          {'L3MON4D3/LuaSnip'},
-          {'rafamadriz/friendly-snippets'},
-      }
-  }
+  {'tpope/vim-fugitive'},
+  {'tpope/vim-sleuth'},
+  {'fatih/vim-go'},
 
-  use('tpope/vim-fugitive')
-  use('tpope/vim-sleuth')
+  --{ 'rose-pine/neovim', as = 'rose-pine' }
+  {'bluz71/vim-nightfly-colors'},
 
-  use('fatih/vim-go')
+  {'theprimeagen/harpoon'},
 
-
-  --use({ 'rose-pine/neovim', as = 'rose-pine' })
-  use('bluz71/vim-nightfly-colors')
-
-  use('theprimeagen/harpoon')
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  --if packer_bootstrap then
-  --  require('packer').sync()
-  --end
-end)
+})
 
