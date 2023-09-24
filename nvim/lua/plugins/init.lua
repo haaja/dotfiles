@@ -30,7 +30,7 @@ return {
       {'rafamadriz/friendly-snippets'},
     }
   },
-
+  { "lukas-reineke/indent-blankline.nvim" },
   {'tpope/vim-fugitive'},
   {'tpope/vim-sleuth'},
   {'fatih/vim-go'},
