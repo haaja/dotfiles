@@ -27,6 +27,7 @@ return {
   {'tpope/vim-fugitive'},
   {'tpope/vim-sleuth'},
   {'fatih/vim-go'},
+  {'mbbill/undotree'},
 
   --{ 'rose-pine/neovim', as = 'rose-pine' }
   {'bluz71/vim-nightfly-colors'},
