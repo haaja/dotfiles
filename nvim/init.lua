@@ -96,15 +96,25 @@ require('lazy').setup({
     },
   },
 
+  -- {
+  --   'bluz71/vim-nightfly-colors',
+  --   name = 'nightfly',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'nightfly'
+  --   end,
+  -- },
+
   {
-    'bluz71/vim-nightfly-colors',
-    name = 'nightfly',
-    lazy = false,
+    'catppuccin/nvim',
+    name = 'catppuccin',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'nightfly'
-    end,
+      vim.cmd.colorscheme 'catppuccin'
+    end
   },
+
   {
     'theprimeagen/harpoon',
     lazy = false,
