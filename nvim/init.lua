@@ -70,6 +70,10 @@ require('lazy').setup({
     },
   },
 
+  {
+    'fatih/vim-go'
+  },
+
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim',  opts = {} },
   {
