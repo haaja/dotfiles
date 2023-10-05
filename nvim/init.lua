@@ -222,6 +222,7 @@ vim.o.hlsearch = true
 vim.o.incsearch = true
 
 vim.o.relativenumber = true
+vim.o.tabstop = 4
 
 -- Make line numbers default
 vim.wo.number = true
