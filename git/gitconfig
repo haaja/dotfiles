@@ -3,23 +3,50 @@
     name = Janne Haapsaari
     email = janne@joh.fi
     signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILTYUtfpHLUmiYqRV37JNNmi36s6oS28Y3m9+FWgyLgF
+
 [push]
-    default = simple
+	default = simple
+
 [pull]
-    rebase = true
+	rebase = true
+
+[rebase]
+	autosquash = true
+
 [core]
-    editor = nvim
-    pager = perl /opt/homebrew/opt/git/share/git-core/contrib/diff-highlight/diff-highlight | less
+	editor = nvim
+	excludesfile = /Users/haaja/.gitignore
+	pager = diff-so-fancy | less --tabs=4 -RFX
+
 [color]
-    ui = auto
+	ui = auto
+
 [merge]
-    tool = nvim -d
+	tool = nvim -d
+
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     lol = log --pretty=format:'%Cred%h %Creset: %C(yellow) Authored: %Creset %aD %Cgreen Committed: %Creset %cD %an %cn %s' --abbrev-commit
+
+[init]
+	defaultBranch = main
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
 [gpg]
     format = ssh
+
 [gpg "ssh"]
-    program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+	allowedSignersFile = /Users/haaja/.config/git/allowed_signers
+
 [commit]
     gpgsign = true
+
+
+[branch]
+	sort = -committerdate
