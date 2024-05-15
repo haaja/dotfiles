@@ -122,6 +122,12 @@ require('lazy').setup({
       vim.cmd.colorscheme 'nightfox'
     end
   },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
 
   {
     'theprimeagen/harpoon',
