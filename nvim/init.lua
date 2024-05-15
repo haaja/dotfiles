@@ -108,22 +108,18 @@ require('lazy').setup({
     },
   },
 
-  -- {
-  --   'bluz71/vim-nightfly-colors',
-  --   name = 'nightfly',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd.colorscheme 'nightfly'
-  --   end,
-  -- },
-
+  --{
+  --  'catppuccin/nvim',
+  --  name = 'catppuccin',
+  --  priority = 1000,
+  --  config = function()
+  --    vim.cmd.colorscheme 'catppuccin'
+  --  end
+  --},
   {
-    'catppuccin/nvim',
-    name = 'catppuccin',
-    priority = 1000,
+    'EdenEast/nightfox.nvim',
     config = function()
-      vim.cmd.colorscheme 'catppuccin'
+      vim.cmd.colorscheme 'nightfox'
     end
   },
 
