@@ -76,19 +76,6 @@ require('lazy').setup({
 
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim',  opts = {} },
-  {
-    -- Adds git related signs to the gutter, as well as utilities for managing changes
-    'lewis6991/gitsigns.nvim',
-    opts = {
-      signs = {
-        add = { text = '+' },
-        change = { text = '~' },
-        delete = { text = '_' },
-        topdelete = { text = '‾' },
-        changedelete = { text = '~' },
-      },
-    },
-  },
 
   --{
   --  'catppuccin/nvim',
@@ -110,52 +97,7 @@ require('lazy').setup({
     priority = 1000,
     opts = {},
   },
-
-  {
-    'theprimeagen/harpoon',
-    lazy = false,
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-    },
-    config = true,
-    keys = {
-      { "<leader>hm", "<cmd>lua require('harpoon.mark').add_file()<cr>",        desc = "Mark file with harpoon" },
-      { "<leader>hn", "<cmd>lua require('harpoon.ui').nav_next()<cr>",          desc = "Go to next harpoon mark" },
-      { "<leader>hp", "<cmd>lua require('harpoon.ui').nav_prev()<cr>",          desc = "Go to previous harpoon mark" },
-      { "<leader>ha", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", desc = "Show harpoon marks" },
-    }
-  },
-
-  {
-    -- Set lualine as statusline
-    'nvim-lualine/lualine.nvim',
-    opts = {
-      options = {
-        icons_enabled = false,
-        component_separators = '|',
-        section_separators = '',
-      },
-    },
-  },
-
-  {
-    'mbbill/undotree',
-    lazy = false,
-    config = function()
-      vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
-      vim.opt.swapfile = false
-      vim.opt.backup = false
-      vim.opt.undofile = true
-    end
-  },
-
-  {
-    'lukas-reineke/indent-blankline.nvim',
-    opts = {},
-    config = function()
-      require('ibl').setup()
-    end
-  },
+  -- themes end
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
