@@ -77,14 +77,7 @@ require('lazy').setup({
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim',  opts = {} },
 
-  --{
-  --  'catppuccin/nvim',
-  --  name = 'catppuccin',
-  --  priority = 1000,
-  --  config = function()
-  --    vim.cmd.colorscheme 'catppuccin'
-  --  end
-  --},
+  -- themes start
   {
     'EdenEast/nightfox.nvim',
     config = function()
