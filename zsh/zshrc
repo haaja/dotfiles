@@ -121,3 +121,14 @@ fi
 if [ -d "${HOME}/go/bin/" ]; then
     export PATH="${HOME}/go/bin:${PATH}"
 fi
+
+# If fnm exists
+if [ -f "$(which fnm)" ]; then
+    eval "$(fnm env --use-on-cd)"
+fi
+
+
+fpath+="/opt/homebrew/share/zsh/site-functions"
+
+autoload -Uz compinit
+compinit
