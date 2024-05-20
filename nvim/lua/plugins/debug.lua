@@ -63,6 +63,8 @@ return {
       --    Don't feel like these are good choices.
       icons = { expanded = '▾', collapsed = '▸', current_frame = '*' },
       controls = {
+        enabled = true,
+        element = "repl",
         icons = {
           pause = '⏸',
           play = '▶',
