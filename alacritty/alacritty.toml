@@ -1,5 +1,7 @@
 [font]
 size = 14
+  [font.normal]
+  family = "JetBrainsMonoNL Nerd Font Mono"
 
 # Nightfox Alacritty Colors
 ## name: nightfox
