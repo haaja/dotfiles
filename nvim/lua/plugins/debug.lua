@@ -3,6 +3,7 @@ return {
   dependencies = {
     -- Creates a beautiful debugger UI
     'rcarriga/nvim-dap-ui',
+    'theHamsta/nvim-dap-virtual-text',
 
     -- Installs the debug adapters for you
     'williamboman/mason.nvim',
@@ -34,6 +35,8 @@ return {
         'delve',
       },
     }
+
+    require('nvim-dap-virtual-text').setup()
 
     -- Basic debugging keymaps, feel free to change to your liking!
     vim.keymap.set('n', '<F1>', dap.continue, { desc = 'Debug: Start/Continue' })
