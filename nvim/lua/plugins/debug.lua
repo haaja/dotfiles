@@ -12,7 +12,7 @@ return {
     -- Add your own debuggers here
     'leoluz/nvim-dap-go',
 
-    'nvim-neotest/nvim-nio'
+    'nvim-neotest/nvim-nio',
   },
   config = function()
     local dap = require 'dap'
@@ -57,7 +57,7 @@ return {
       icons = { expanded = '▾', collapsed = '▸', current_frame = '*' },
       controls = {
         enabled = true,
-        element = "repl",
+        element = 'repl',
         icons = {
           pause = '⏸',
           play = '▶',

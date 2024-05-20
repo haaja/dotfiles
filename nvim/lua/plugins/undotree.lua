@@ -1,5 +1,5 @@
 return {
-   {
+  {
     'mbbill/undotree',
     lazy = false,
     config = function()
@@ -7,6 +7,6 @@ return {
       vim.opt.swapfile = false
       vim.opt.backup = false
       vim.opt.undofile = true
-    end
-  }
+    end,
+  },
 }

@@ -32,7 +32,7 @@ vim.opt.smartcase = true
 
 vim.opt.scrolloff = 16
 vim.opt.cursorline = true
-vim.opt.backspace = "indent,eol,start"
+vim.opt.backspace = 'indent,eol,start'
 
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'

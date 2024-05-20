@@ -19,9 +19,9 @@ return {
       },
     },
     config = function()
-      local telescope = require('telescope')
+      local telescope = require 'telescope'
 
-      telescope.setup({
+      telescope.setup {
         defaults = {
           mappings = {
             i = {
@@ -30,10 +30,10 @@ return {
             },
           },
         },
-      })
+      }
 
       -- Enable telescope fzf native, if installed
-      pcall(telescope.load_extension('fzf'))
+      pcall(telescope.load_extension 'fzf')
 
       -- See `:help telescope.builtin`
       vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
@@ -54,6 +54,6 @@ return {
       vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, { desc = '[F]ind by [G]rep' })
       vim.keymap.set('n', '<leader>fd', require('telescope.builtin').diagnostics, { desc = '[F]ind [D]iagnostics' })
       vim.keymap.set('n', '<leader>fr', require('telescope.builtin').resume, { desc = '[F]ind [R]esume' })
-    end
-  }
+    end,
+  },
 }

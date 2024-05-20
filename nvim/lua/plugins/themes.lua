@@ -3,10 +3,10 @@ return {
     'EdenEast/nightfox.nvim',
     config = function()
       vim.cmd.colorscheme 'nightfox'
-    end
+    end,
   },
   {
-    "folke/tokyonight.nvim",
+    'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
     opts = {},
