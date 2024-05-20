@@ -52,7 +52,14 @@ return {
         function()
           require('neotest').run.run { strategy = 'dap' }
         end,
-        desc = '[T]est DAP run',
+        desc = '[T]est debug nearest test',
+      },
+      {
+        '<leader>tf',
+        function()
+          require('neotest').run.run(vim.fn.expand '%')
+        end,
+        desc = '[T]est run current file',
       },
       {
         '<leader>tx',
