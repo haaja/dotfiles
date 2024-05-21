@@ -97,6 +97,13 @@ return {
         desc = '[T]est open output',
       },
       {
+        '<leader>tO',
+        function()
+          require('neotest').output_panel.toggle()
+        end,
+        desc = '[T]test toggle output panel',
+      },
+      {
         '<leader>tw',
         function()
           require('neotest').watch.watch()
