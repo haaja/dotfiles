@@ -3,6 +3,7 @@ tap "homebrew/services"
 brew "aws-vault", link: false
 brew "awscli"
 brew "coreutils"
+brew "delve"
 brew "diff-so-fancy"
 brew "eslint"
 brew "fd"
