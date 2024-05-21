@@ -92,7 +92,7 @@ return {
       {
         '<leader>to',
         function()
-          require('neotest').output.open()
+          require('neotest').output.open { enter = true, auto_close = true }
         end,
         desc = '[T]est open output',
       },
