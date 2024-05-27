@@ -7,6 +7,7 @@ return {
       'antoinemadec/FixCursorHold.nvim',
       'nvim-treesitter/nvim-treesitter',
       'nvim-neotest/neotest-jest',
+      'nvim-neotest/neotest-go',
     },
     config = function()
       require('neotest').setup {
@@ -19,6 +20,7 @@ return {
               return vim.fn.getcwd()
             end,
           },
+          require 'neotest-go',
         },
         discovery = {
           enabled = false,
