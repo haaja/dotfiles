@@ -127,6 +127,13 @@ if [ -d "${HOME}/go/bin/" ]; then
     export PATH="${HOME}/go/bin:${PATH}"
 fi
 
+# fnm
+FNM_PATH="/home/haaja/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/haaja/.local/share/fnm:$PATH"
+  eval "$(fnm env --use-on-cd)"
+fi
+
 # If fnm exists
 if [ -f "$(which fnm)" ]; then
     eval "$(fnm env --use-on-cd)"
