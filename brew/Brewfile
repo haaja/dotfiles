@@ -57,8 +57,7 @@ brew "terraform"
 brew "the_silver_searcher"
 brew "tmux"
 brew "tree"
-brew "vnstat", restart_service: true
-brew "watchman"
+brew "vnstat", restart_service: :changed
 brew "wget"
 brew "yarn"
 brew "zsh"
