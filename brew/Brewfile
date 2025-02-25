@@ -8,6 +8,7 @@ brew "age"
 brew "openssl@3"
 brew "node"
 brew "aws-cdk"
+brew "aws-sam-cli"
 brew "aws-vault", link: false
 brew "awscli"
 brew "bash"
