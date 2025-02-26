@@ -1,6 +1,5 @@
 tap "1password/tap"
 tap "aws/tap"
-tap "dart-lang/dart"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "jesseduffield/lazygit"
