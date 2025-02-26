@@ -6,6 +6,10 @@ This is a simple repository for my dotfiles.
 
 1. Install homebrew.
 
+    ```shell
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+
 2. Install dependencies
 
     ```shell
