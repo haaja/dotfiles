@@ -95,11 +95,6 @@ else
   export EDITOR='nvim'
 fi
 
-# Use gnu grep where possible
-if [ -f "$(which ggrep)" ]; then
-    alias grep='ggrep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
-fi
-
 # google-cloud-sdk
 if [ -f "${HOME}/google-cloud-sdk/path.zsh.inc" ]; then
     source "${HOME}/google-cloud-sdk/path.zsh.inc"
