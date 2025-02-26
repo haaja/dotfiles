@@ -33,7 +33,8 @@
 			]
 		},
 		{
-			"type": "rprompt",
+			"type": "prompt",
+			"alignment": "left",
 			"overflow": "hidden",
 			"segments": [
 				{
