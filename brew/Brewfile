@@ -62,6 +62,7 @@ brew "tree"
 brew "vnstat", restart_service: :changed
 brew "wget"
 brew "yarn"
+brew "zoxide"
 brew "zsh"
 brew "jesseduffield/lazygit/lazygit"
 cask "1password"

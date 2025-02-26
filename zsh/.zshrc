@@ -68,9 +68,6 @@ alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
 
-# Shell integrations
-eval "$(fzf --zsh)"
-
 # User configuration
 # Alias vim and vi to nvim
 if [ -f "$(which nvim)" ]; then
@@ -123,3 +120,7 @@ if [ -f "$(which fnm)" ]; then
 fi
 
 fpath+="/opt/homebrew/share/zsh/site-functions"
+
+# Shell integrations
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
