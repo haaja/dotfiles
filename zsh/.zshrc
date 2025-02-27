@@ -121,6 +121,8 @@ fi
 
 fpath+="/opt/homebrew/share/zsh/site-functions"
 
+export GIT_CONFIG_GLOBAL="$HOME/.config/git/gitconfig"
+
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
