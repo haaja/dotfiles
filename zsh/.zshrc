@@ -29,6 +29,10 @@ zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
+
+fpath+=(/Users/haaja/.docker/completions)
+fpath+=(/opt/homebrew/share/zsh/site-functions)
+
 # Load completions
 autoload -Uz compinit && compinit
 
@@ -119,7 +123,6 @@ if [ -f "$(which fnm)" ]; then
     eval "$(fnm env --use-on-cd)"
 fi
 
-fpath+="/opt/homebrew/share/zsh/site-functions"
 
 export GIT_CONFIG_GLOBAL="$HOME/.config/git/gitconfig"
 
