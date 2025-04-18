@@ -77,6 +77,16 @@ alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
 
+
+export GIT_CONFIG_GLOBAL="$HOME/.config/git/gitconfig"
+
+# Attempt to detect WSL
+if [[ $(uname -r) =~ "microsoft" ]]; then
+    export GIT_CONFIG_GLOBAL="$HOME/.gitconfig"
+    alias ssh='ssh.exe'
+    alias ssh-add='ssh-add.exe'
+fi
+
 # User configuration
 # Alias vim and vi to nvim
 if [ -f "$(which nvim)" ]; then
@@ -102,7 +112,6 @@ if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then
     source "${HOME}/google-cloud-sdk/completion.zsh.inc"
 fi
 
-
 # Add ~/bin to PATH
 if [ -d "${HOME}/local/bin" ]; then
     export PATH="${PATH}:${HOME}/local/bin"
@@ -124,9 +133,7 @@ if [ -f "$(which fnm)" ]; then
     eval "$(fnm env --use-on-cd)"
 fi
 
-
-export GIT_CONFIG_GLOBAL="$HOME/.config/git/gitconfig"
-
 # Shell integrations
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
