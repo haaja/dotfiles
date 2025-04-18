@@ -33,6 +33,11 @@ zinit snippet OMZP::command-not-found
 fpath+=(/Users/haaja/.docker/completions)
 fpath+=(/opt/homebrew/share/zsh/site-functions)
 
+# Add ~/bin to PATH
+if [ -d "${HOME}/bin" ]; then
+    export PATH="${PATH}:${HOME}/bin"
+fi
+
 # Load completions
 autoload -Uz compinit && compinit
 
@@ -97,10 +102,6 @@ if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then
     source "${HOME}/google-cloud-sdk/completion.zsh.inc"
 fi
 
-# Add ~/bin to PATH
-if [ -d "${HOME}/bin" ]; then
-    export PATH="${PATH}:${HOME}/bin"
-fi
 
 # Add ~/bin to PATH
 if [ -d "${HOME}/local/bin" ]; then
