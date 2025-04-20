@@ -82,6 +82,7 @@ export GIT_CONFIG_GLOBAL="$HOME/.config/git/gitconfig"
 
 # Attempt to detect WSL
 if [[ $(uname -r) =~ "microsoft" ]]; then
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
     export GIT_CONFIG_GLOBAL="$HOME/.gitconfig"
     alias ssh='ssh.exe'
     alias ssh-add='ssh-add.exe'
@@ -134,6 +135,5 @@ if [ -f "$(which fnm)" ]; then
 fi
 
 # Shell integrations
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
