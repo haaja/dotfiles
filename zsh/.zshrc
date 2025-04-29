@@ -30,7 +30,6 @@ zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
 
-fpath+=(/Users/haaja/.docker/completions)
 fpath+=(/opt/homebrew/share/zsh/site-functions)
 
 # Add ~/bin to PATH
