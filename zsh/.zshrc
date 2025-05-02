@@ -29,8 +29,16 @@ zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
-
-fpath+=(/opt/homebrew/share/zsh/site-functions)
+# Attempt to detect WSL
+if [[ $(uname -r) =~ "microsoft" ]]; then
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+    export GIT_CONFIG_GLOBAL="$HOME/.gitconfig"
+    alias ssh='ssh.exe'
+    alias ssh-add='ssh-add.exe'
+else
+    export GIT_CONFIG_GLOBAL="$HOME/.config/git/gitconfig"
+    fpath+=(/opt/homebrew/share/zsh/site-functions)
+fi
 
 # Add ~/bin to PATH
 if [ -d "${HOME}/bin" ]; then
@@ -76,16 +84,6 @@ alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
 
-
-export GIT_CONFIG_GLOBAL="$HOME/.config/git/gitconfig"
-
-# Attempt to detect WSL
-if [[ $(uname -r) =~ "microsoft" ]]; then
-    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-    export GIT_CONFIG_GLOBAL="$HOME/.gitconfig"
-    alias ssh='ssh.exe'
-    alias ssh-add='ssh-add.exe'
-fi
 
 # User configuration
 # Alias vim and vi to nvim
