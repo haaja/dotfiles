@@ -29,9 +29,10 @@ zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Attempt to detect WSL
 if [[ $(uname -r) =~ "microsoft" ]]; then
-    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
     export GIT_CONFIG_GLOBAL="$HOME/.gitconfig"
     alias ssh='ssh.exe'
     alias ssh-add='ssh-add.exe'
@@ -137,3 +138,14 @@ fi
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+# Podman
+export PODMAN_COMPOSE_WARNING_LOGS=false
+
+export LDFLAGS="-L/opt/homebrew/opt/libffi/lib -L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libffi/include -I/usr/local/opt/openssl/include"
+#export LDFLAGS="-L/usr/local/opt/openssl/lib"
+#export CPPFLAGS="-I/usr/local/opt/openssl/include"
+
+# Added by Antigravity
+export PATH="/Users/haaja/.antigravity/antigravity/bin:$PATH"
