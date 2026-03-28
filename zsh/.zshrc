@@ -29,8 +29,6 @@ zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Attempt to detect WSL
 if [[ $(uname -r) =~ "microsoft" ]]; then
     export GIT_CONFIG_GLOBAL="$HOME/.gitconfig"
@@ -85,13 +83,10 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias ls='ls --color'
-alias vim='nvim'
 alias c='clear'
 
-
-# User configuration
 # Alias vim and vi to nvim
-if [ -f "$(which nvim)" ]; then
+if command -v nvim &>/dev/null; then
     alias vim="nvim"
     alias vi="nvim"
     alias vimdiff='nvim -d'
@@ -114,25 +109,15 @@ if [ -f "${HOME}/google-cloud-sdk/completion.zsh.inc" ]; then
     source "${HOME}/google-cloud-sdk/completion.zsh.inc"
 fi
 
-# Add ~/bin to PATH
-if [ -d "${HOME}/local/bin" ]; then
-    export PATH="${PATH}:${HOME}/local/bin"
-fi
-
 if [ -d "${HOME}/go/bin/" ]; then
     export PATH="${HOME}/go/bin:${PATH}"
 fi
 
 # fnm
-FNM_PATH="/home/haaja/.local/share/fnm"
+FNM_PATH="${HOME}/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/haaja/.local/share/fnm:$PATH"
+  export PATH="$FNM_PATH:$PATH"
   eval "$(fnm env --use-on-cd)"
-fi
-
-# If fnm exists
-if [ -f "$(which fnm)" ]; then
-    eval "$(fnm env --use-on-cd)"
 fi
 
 # Shell integrations
@@ -142,14 +127,14 @@ eval "$(zoxide init --cmd cd zsh)"
 # Podman
 export PODMAN_COMPOSE_WARNING_LOGS=false
 
-export LDFLAGS="-L/opt/homebrew/opt/libffi/lib -L/usr/local/opt/openssl/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/libffi/include -I/usr/local/opt/openssl/include"
-#export LDFLAGS="-L/usr/local/opt/openssl/lib"
-#export CPPFLAGS="-I/usr/local/opt/openssl/include"
+# Build flags (macOS/Homebrew)
+if [[ -d "/opt/homebrew/opt/libffi" ]]; then
+    export LDFLAGS="-L/opt/homebrew/opt/libffi/lib -L/usr/local/opt/openssl/lib"
+    export CPPFLAGS="-I/opt/homebrew/opt/libffi/include -I/usr/local/opt/openssl/include"
+fi
 
-
-if [ -d "/Users/haaja/.antigravity/antigravity/bin" ]; then
-    export PATH="/Users/haaja/.antigravity/antigravity/bin:$PATH"
+if [ -d "$HOME/.antigravity/antigravity/bin" ]; then
+    export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 fi
 
 if [ -d "$HOME/.local/bin" ]; then
