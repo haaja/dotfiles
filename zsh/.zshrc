@@ -65,7 +65,7 @@ bindkey -e
 #bindkey '^[w' kill-region
 
 # History
-HISTSIZE=5000
+HISTSIZE=15000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
@@ -147,5 +147,11 @@ export CPPFLAGS="-I/opt/homebrew/opt/libffi/include -I/usr/local/opt/openssl/inc
 #export LDFLAGS="-L/usr/local/opt/openssl/lib"
 #export CPPFLAGS="-I/usr/local/opt/openssl/include"
 
-# Added by Antigravity
-export PATH="/Users/haaja/.antigravity/antigravity/bin:$PATH"
+
+if [ -d "/Users/haaja/.antigravity/antigravity/bin" ]; then
+    export PATH="/Users/haaja/.antigravity/antigravity/bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ]; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
