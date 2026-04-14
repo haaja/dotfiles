@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
 	name = Janne Haapsaari
-	email = janne@joh.fi
+	email = janne.haapsaari@qvik.fi
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILTYUtfpHLUmiYqRV37JNNmi36s6oS28Y3m9+FWgyLgF
 
 [push]

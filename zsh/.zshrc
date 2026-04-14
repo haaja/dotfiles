@@ -133,6 +133,10 @@ if [[ -d "/opt/homebrew/opt/libffi" ]]; then
     export CPPFLAGS="-I/opt/homebrew/opt/libffi/include -I/usr/local/opt/openssl/include"
 fi
 
+if [ -d "${HOME}/.cargo/bin" ]; then
+    export PATH="${HOME}/.cargo/bin:$PATH"
+fi
+
 if [ -d "$HOME/.antigravity/antigravity/bin" ]; then
     export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 fi
@@ -140,3 +144,6 @@ fi
 if [ -d "$HOME/.local/bin" ]; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
+
+
+export PATH="$HOME/.local/bin:$PATH"
