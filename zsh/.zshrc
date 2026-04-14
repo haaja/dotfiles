@@ -120,9 +120,6 @@ if [ -d "$FNM_PATH" ]; then
   eval "$(fnm env --use-on-cd)"
 fi
 
-# Shell integrations
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
 
 # Podman
 export PODMAN_COMPOSE_WARNING_LOGS=false
@@ -147,3 +144,7 @@ fi
 
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# Shell integrations
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
