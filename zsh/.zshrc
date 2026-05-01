@@ -142,6 +142,10 @@ if [ -d "$HOME/.local/bin" ]; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -d "$HOME/.fzf/bin" ]; then
+    export PATH="$HOME/.fzf/bin:$PATH"
+fi
+
 
 export PATH="$HOME/.local/bin:$PATH"
 
