@@ -150,63 +150,17 @@ fi
 export PATH="$HOME/.local/bin:$PATH"
 
 
-# lean-ctx shell hook — transparent CLI compression (90+ patterns)
-if [[ -x "$HOME/.cargo/bin/lean-ctx" ]]; then
-    _lean_ctx_cmds=(git npm pnpm yarn cargo docker docker-compose kubectl gh pip pip3 ruff go golangci-lint eslint prettier tsc ls find grep curl wget php composer)
-
-    _lc() {
-        if [ -n "${LEAN_CTX_DISABLED:-}" ] || [ ! -t 1 ]; then
-            command "$@"
-            return
-        fi
-        "$HOME/.cargo/bin/lean-ctx" -c "$@"
-        local _lc_rc=$?
-        if [ "$_lc_rc" -eq 127 ] || [ "$_lc_rc" -eq 126 ]; then
-            command "$@"
-        else
-            return "$_lc_rc"
-        fi
-    }
-
-    lean-ctx-on() {
-        for _lc_cmd in "${_lean_ctx_cmds[@]}"; do
-            # shellcheck disable=SC2139
-            alias "$_lc_cmd"='_lc '"$_lc_cmd"
-        done
-        alias k='_lc kubectl'
-        export LEAN_CTX_ENABLED=1
-        echo "lean-ctx: ON"
-    }
-
-    lean-ctx-off() {
-        for _lc_cmd in "${_lean_ctx_cmds[@]}"; do
-            unalias "$_lc_cmd" 2>/dev/null || true
-        done
-        unalias k 2>/dev/null || true
-        unset LEAN_CTX_ENABLED
-        echo "lean-ctx: OFF"
-    }
-
-    lean-ctx-raw() {
-        LEAN_CTX_RAW=1 command "$@"
-    }
-
-    lean-ctx-status() {
-        if [ -n "${LEAN_CTX_DISABLED:-}" ]; then
-            echo "lean-ctx: DISABLED (LEAN_CTX_DISABLED is set)"
-        elif [ -n "${LEAN_CTX_ENABLED:-}" ]; then
-            echo "lean-ctx: ON"
-        else
-            echo "lean-ctx: OFF"
-        fi
-    }
-
-    if [ -z "${LEAN_CTX_ACTIVE:-}" ] && [ -z "${LEAN_CTX_DISABLED:-}" ] && [ "${LEAN_CTX_ENABLED:-1}" != "0" ]; then
-        lean-ctx-on
-    fi
-fi
-# lean-ctx shell hook — end
 
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+# lean-ctx shell hook
+[ -f "/Users/haaja/.lean-ctx/shell-hook.zsh" ] && . "/Users/haaja/.lean-ctx/shell-hook.zsh"
+lean-ctx-off
+
+# >>> lean-ctx agent aliases >>>
+alias claude='LEAN_CTX_AGENT=1 BASH_ENV="$HOME/.bashenv" claude'
+alias codex='LEAN_CTX_AGENT=1 BASH_ENV="$HOME/.bashenv" codex'
+alias gemini='LEAN_CTX_AGENT=1 BASH_ENV="$HOME/.bashenv" gemini'
+# <<< lean-ctx agent aliases <<<
