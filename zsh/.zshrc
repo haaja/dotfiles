@@ -148,7 +148,10 @@ fi
 
 export PATH="$HOME/.local/bin:$PATH"
 
-
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh)"
+export PATH="./vendor/bundle/binstubs:$PATH"
 
 # Shell integrations
 eval "$(fzf --zsh)"
