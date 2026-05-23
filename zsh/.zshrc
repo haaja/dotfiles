@@ -146,7 +146,6 @@ if [ -d "$HOME/.fzf/bin" ]; then
     export PATH="$HOME/.fzf/bin:$PATH"
 fi
 
-
 export PATH="$HOME/.local/bin:$PATH"
 
 
@@ -154,13 +153,3 @@ export PATH="$HOME/.local/bin:$PATH"
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-
-# lean-ctx shell hook
-[ -f "/Users/haaja/.lean-ctx/shell-hook.zsh" ] && . "/Users/haaja/.lean-ctx/shell-hook.zsh"
-lean-ctx-off
-
-# >>> lean-ctx agent aliases >>>
-alias claude='LEAN_CTX_AGENT=1 BASH_ENV="$HOME/.bashenv" claude'
-alias codex='LEAN_CTX_AGENT=1 BASH_ENV="$HOME/.bashenv" codex'
-alias gemini='LEAN_CTX_AGENT=1 BASH_ENV="$HOME/.bashenv" gemini'
-# <<< lean-ctx agent aliases <<<
