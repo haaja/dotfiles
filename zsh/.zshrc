@@ -39,13 +39,6 @@ else
     fpath+=(/opt/homebrew/share/zsh/site-functions)
 fi
 
-# Add ~/bin to PATH
-if [ -d "${HOME}/local/bin" ]; then
-    export PATH="${HOME}/local/bin:${PATH}"
-fi
-if [ -d "${HOME}/bin" ]; then
-    export PATH="${HOME}/bin:${PATH}"
-fi
 
 # Load completions
 autoload -Uz compinit && compinit
@@ -134,10 +127,6 @@ if [ -d "${HOME}/.cargo/bin" ]; then
     export PATH="${HOME}/.cargo/bin:$PATH"
 fi
 
-if [ -d "$HOME/.antigravity/antigravity/bin" ]; then
-    export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
-fi
-
 if [ -d "$HOME/.local/bin" ]; then
     export PATH="$HOME/.local/bin:$PATH"
 fi
@@ -146,7 +135,29 @@ if [ -d "$HOME/.fzf/bin" ]; then
     export PATH="$HOME/.fzf/bin:$PATH"
 fi
 
-export PATH="$HOME/.local/bin:$PATH"
+# Add ~/bin to PATH
+if [ -d "${HOME}/local/bin" ]; then
+    export PATH="${HOME}/local/bin:${PATH}"
+fi
+if [ -d "${HOME}/bin" ]; then
+    export PATH="${HOME}/bin:${PATH}"
+fi
+
+ANDROID_STUDIO="$HOME/Applications/Android Studio.app"
+BUILD_TOOLS_VERSION=37.0.0
+
+if [[ -d "$ANDROID_STUDIO" ]] && [[ -d "$HOME/Library/Android/sdk" ]]; then
+  # Android SDK command line tools 'studio', 'emulator', 'avdmanager', 'adb', 'aapt', etc.
+  export ANDROID_HOME="$HOME/Library/Android/sdk"
+  export PATH="$ANDROID_STUDIO/Contents/MacOS:$PATH"
+  export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH"
+  export PATH="$ANDROID_HOME/build-tools/$BUILD_TOOLS_VERSION:$PATH"
+
+  # Java command line tools 'java', 'javac', 'jarsigner', etc.
+  #export JAVA_HOME="$ANDROID_STUDIO/Contents/jbr/Contents/Home"
+  #export PATH="$JAVA_HOME/bin:$PATH"
+  export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+fi
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -155,4 +166,3 @@ export PATH="./vendor/bundle/binstubs:$PATH"
 
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
