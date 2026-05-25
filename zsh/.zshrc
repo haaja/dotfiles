@@ -160,9 +160,11 @@ if [[ -d "$ANDROID_STUDIO" ]] && [[ -d "$HOME/Library/Android/sdk" ]]; then
 fi
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - zsh)"
-export PATH="./vendor/bundle/binstubs:$PATH"
+if [ -d "$HOME/.rbenv/bin" ]; then
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init - zsh)"
+    export PATH="./vendor/bundle/binstubs:$PATH"
+fi
 
 # Shell integrations
 eval "$(fzf --zsh)"
