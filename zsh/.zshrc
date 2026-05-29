@@ -45,10 +45,6 @@ autoload -Uz compinit && compinit
 
 zinit cdreplay -q
 
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-    eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/config.json)"
-fi
-
 # Keybindings
 bindkey -e
 #bindkey '^p' history-search-backward
@@ -168,3 +164,8 @@ fi
 
 # Shell integrations
 eval "$(fzf --zsh)"
+
+# Prompt (after PATH setup so the binary is found, e.g. ~/bin)
+if command -v oh-my-posh &>/dev/null; then
+    eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/config.json)"
+fi
