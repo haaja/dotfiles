@@ -74,6 +74,12 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color'
 alias c='clear'
 
+# Claude environments
+if command -v claude &>/dev/null; then
+    alias claude-customer='CLAUDE_CONFIG_DIR="$HOME/.claude-customer" claude'
+    alias claude-work='CLAUDE_CONFIG_DIR="$HOME/.claude-qvik" claude'
+fi
+
 # Alias vim and vi to nvim
 if command -v nvim &>/dev/null; then
     alias vim="nvim"
