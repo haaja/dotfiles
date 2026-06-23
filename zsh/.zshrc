@@ -2,6 +2,14 @@ if [[ -f "/opt/homebrew/bin/brew" ]] then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+# Docker Desktop's WSL integration installs a _docker completion symlink into
+# /usr/share/zsh/vendor-completions that dangles while Docker Desktop is stopped,
+# breaking compinit. Drop that dir from fpath when the symlink is broken. Must run
+# before zinit/compinit so no compinit invocation ever scans the dead symlink.
+if [[ -L /usr/share/zsh/vendor-completions/_docker && ! -e /usr/share/zsh/vendor-completions/_docker ]]; then
+    fpath=(${fpath:#/usr/share/zsh/vendor-completions})
+fi
+
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -38,7 +46,6 @@ else
     export GIT_CONFIG_GLOBAL="$HOME/.config/git/gitconfig"
     fpath+=(/opt/homebrew/share/zsh/site-functions)
 fi
-
 
 # Load completions
 autoload -Uz compinit && compinit
@@ -141,8 +148,13 @@ fi
 if [ -d "${HOME}/local/bin" ]; then
     export PATH="${HOME}/local/bin:${PATH}"
 fi
+
 if [ -d "${HOME}/bin" ]; then
     export PATH="${HOME}/bin:${PATH}"
+fi
+
+if [ -d "${HOME}/.opencode" ]; then
+    export PATH="${HOME}/.opencode/bin:${PATH}"
 fi
 
 ANDROID_STUDIO="$HOME/Applications/Android Studio.app"
