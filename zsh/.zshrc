@@ -157,6 +157,10 @@ if [ -d "${HOME}/.opencode" ]; then
     export PATH="${HOME}/.opencode/bin:${PATH}"
 fi
 
+if [ -d "/snap/bin" ]; then
+    export PATH="/snap/bin:${PATH}"
+fi
+
 ANDROID_STUDIO="$HOME/Applications/Android Studio.app"
 BUILD_TOOLS_VERSION=37.0.0
 
